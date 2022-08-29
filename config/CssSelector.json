@@ -1,0 +1,11 @@
+{
+  "writeCenterCard": "div[aria-label='创作中心卡片']",
+  "pageBar": "div[class='Pagination']",
+  "pageCount": "button[class='Button PaginationButton Button--plain']",
+  "blockFlag": "没有知识存在的荒原",
+
+  "answers": "a[data-za-detail-view-element_name=Title]",
+  "posts": "a[href^=\"//zhuanlan.zhihu.com/p/\"]",
+  "zvideos": "a[href^=\"https://www.zhihu.com/zvideo/\"]",
+  "pins": "a[href^=\"//www.zhihu.com/pin/\"]"
+}
