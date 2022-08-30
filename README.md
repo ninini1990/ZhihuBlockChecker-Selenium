@@ -1,5 +1,5 @@
 <h2> ZhihuBlockChecker-Selenium </h2>
-知乎用户用于检查创作内容被屏蔽的小工具，包括回答、文章、视频、想法等。<p>
+知乎用户用于检查全部创作内容被屏蔽情况的小工具，包括回答、文章、视频、想法等。<p>
 目前仅支持Windows10系统、Chrome浏览器。<p>
 
 开发工具：Python 3.10.6, Selenium 4.4.2, PyQt 6.3.1<p>
@@ -57,8 +57,8 @@ Github: https://github.com/ninini1990/ZhihuBlockChecker-Selenium/releases<p>
   
 ![image](https://user-images.githubusercontent.com/112439804/187319847-eca651a7-9371-4c24-baf2-88dc68dacede.png)<p>
   
-7. 设置Chrome浏览器信息。目前只可设置其监听端口，默认为8888。<p>
-如果已被其它程序占用，可自定义为其它端口。<p>
+7. 设置Chrome浏览器信息。目前只允许设置其监听端口，默认为8888。<p>
+如果已被其它程序占用，可自定义为其它端口。不能大于65535。<p>
 Chrome安装路径需要确认为 "C:\\Program Files (x86)\\Google\\Chrome\\Application" （通常默认安装在此路径下）<p>
   
 ![image](https://user-images.githubusercontent.com/112439804/187319865-13c4528c-2b52-4fc5-895a-9642a3acf036.png)<p>
@@ -85,7 +85,7 @@ Chrome安装路径需要确认为 "C:\\Program Files (x86)\\Google\\Chrome\\Appl
   
 11. 检查结果示例<p>
   
-![image](https://user-images.githubusercontent.com/112439804/187326297-bf4000db-3aae-43ca-b7d0-077ccbf56870.png)
+![image](https://user-images.githubusercontent.com/112439804/187347895-a65f03bf-c9a1-426d-8401-bd7c67e695d5.png)
 
 
 
