@@ -16,7 +16,7 @@ Github: https://github.com/ninini1990/ZhihuBlockChecker-Selenium/releases<p>
 **安全性：**<p>
 1. 此工具只发布于上述 Github和百度网盘指定的两个分享链接。不要从其它来源下载。<p>
 2. 工具中只需要输入你的知乎用户ID, 不需要输入密码。<p>
-第一次执行时需要登录，也是在Chrome浏览器中操作。<p>
+第一次执行时需要人工登录，是在Chrome浏览器中操作。<p>
 此工具不会获取、保存、发送你的用户密码。<p>
 3. 如果仍然担心安全性，可从Github下载源码。在本地安装Python环境，并执行脚本。入口是Pyqt_Instance.py<p>
 
