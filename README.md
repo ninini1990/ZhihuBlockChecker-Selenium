@@ -33,13 +33,13 @@ Github: https://github.com/ninini1990/ZhihuBlockChecker-Selenium/releases<p>
 
 1. 从Github或百度网盘指定地址，下载最新版本的zip压缩包。<p>  
   
-2. 解压到任意目录。路径中不要包含中文，且需要有大于200MB的磁盘空间(运行时Chrome用户文件所需空间)。<p>
+2. 解压到任意目录。路径中不要包含中文，且需要有大于200MB的磁盘空间 (运行时Chrome用户文件所需空间)。<p>
   
 3. 双击执行ZhihuBlockChecker.exe <p>
   
 ![image](https://user-images.githubusercontent.com/112439804/187325189-0a291217-6c9c-4330-9d5c-5775eb1c309b.png)<p>
   
-4. 在工具界面中输入你的知乎用户ID(非知乎用户名）。<p>
+4. 在工具界面中输入你的知乎用户ID (非知乎用户名）。<p>
 例如一个知乎用户的个人主页链接是 https://www.zhihu.com/people/heheda111 <p>
 那么对应的知乎用户ID就是 heheda111<p>
   
