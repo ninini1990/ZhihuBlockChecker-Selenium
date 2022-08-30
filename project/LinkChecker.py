@@ -56,7 +56,7 @@ def checkLink(browser, pageName):
         # 估算检查所需时长
         allLinkCount = len(allLinkList)
         needTime = int((allLinkCount * 3) / 60)
-        print('开始检查链接...总计{0}个链接，预计所需时间为{1}分钟'.format(allLinkCount, needTime))
+        print('开始检查链接...总计{0}个链接, 预计所需时间为{1}分钟'.format(allLinkCount, needTime))
 
         # 开始批量检测链接
         try:
@@ -67,7 +67,7 @@ def checkLink(browser, pageName):
                 timestamp = getTimeStamp()
                 index = allLinkList.index(item)
                 link = item['link']
-                print('{0} 检查中({1}/{2}): {3}'.format(timestamp, index + 1, allLinkCount, link))
+                print('{0} 检查中({1}/{2})： {3}'.format(timestamp, index + 1, allLinkCount, link))
 
                 response = requestLink(link, pageName)
                 if (blockFlag in response.text):
@@ -80,11 +80,11 @@ def checkLink(browser, pageName):
             else:
                 blockRate = 'n/a'
 
-            print('{0} - 全部链接数量：{1}, 被屏蔽链接数量：{2}, 请求异常数量：{3} '.format(cnPageName, allLinkCount, blockedLinkCount, blockRate))
+            print('{0} - 全部链接数量: {1}, 被屏蔽链接数量: {2}, 被屏蔽比例: {3} '.format(cnPageName, allLinkCount, blockedLinkCount, blockRate))
             print('正在生成报告...')
             report = outputReportPage(zhihuUserId, pageName, allLinkCount, blockedLinkCount, blockRate, blockedLinkList)
         except Exception as e:
-            print(e, "当前检查出现网络错误或其它错误，跳过。继续检查下一项。")
+            print(e, "当前检查出现网络错误或其它错误, 跳过. 继续检查下一项.")
     finally:
         print('------ 当前页面项检查完成 ------')
 
@@ -109,7 +109,7 @@ def checkProcess():
         # 执行检查
         for pageName in pageNameList:
             cnPageName = convertPageName(pageName)
-            print('------ 开始检查：' + cnPageName + " ------")
+            print('------ 开始检查: ' + cnPageName + " ------")
             checkLink(browser, pageName)
 
         # 关闭浏览器实例,计算脚本实际耗时
@@ -117,7 +117,7 @@ def checkProcess():
         browser.quit()
         endTime = time.perf_counter()
         timeCost = int((endTime - startTime) / 60)
-        print('====== 全部检查执行完毕，脚本总计耗时约{0}分钟 ======'.format(timeCost))
+        print('====== 全部检查执行完毕, 脚本总计耗时约 {0} 分钟 ======'.format(timeCost))
 
     except Exception as e:
         print(e, '执行发生异常')

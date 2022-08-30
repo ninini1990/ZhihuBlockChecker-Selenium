@@ -56,10 +56,10 @@ def isLogin(browser):
         writeCenterCard = WebDriverWait(browser, 10).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, selectors['writeCenterCard']))
         )
-        print('检测登录状态成功：用户已登录')
+        print('检测登录状态成功: 用户已登录')
         return True
     except Exception as e:
-        print(e, '检测登录状态出错：用户未登录，或与设置的用户不一致')
+        print(e, '检测登录状态出错: 用户未登录,或与设置的用户不一致')
         return False
 
 
@@ -95,7 +95,7 @@ def initBrowser():
         return browser
 
     except Exception as e:
-        print(e, '浏览器未启动，或初始化失败')
+        print(e, '浏览器未启动, 或初始化失败')
 
 
 # 获取相应Page的总页面数量
@@ -113,9 +113,9 @@ def getPageCount(browser):
         # 如存在翻页栏，则获取总页数
         pageCountList = browser.find_elements(By.CSS_SELECTOR, selectors['pageCount'])
         pageCount = int(pageCountList[-1].text)
-        print("总页数为：{0}".format(pageCount))
+        print("总页数为: {0}".format(pageCount))
         return pageCount
 
     except Exception as e:
-        print('当前用户回答只有一页或发生异常，继续执行')
+        print('当前用户回答只有一页或发生异常, 继续执行')
         return 1

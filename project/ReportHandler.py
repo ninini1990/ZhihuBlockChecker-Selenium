@@ -33,7 +33,7 @@ def outputReportPage(zhihuUserId, pageName, allLinkCount, blockedLinkCount, bloc
         f = open(reportFilePath, 'w', encoding="utf-8")
         f.write(reportPage)
         f.close()
-        print("生成报告文件成功:<br> {0}".format(reportFilePath))
+        print("生成报告文件成功: <br> {0}".format(reportFilePath))
         return reportFilePath
     except Exception as e:
         print(e, "生成报告文件失败")
