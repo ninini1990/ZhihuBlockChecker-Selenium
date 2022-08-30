@@ -1,11 +1,12 @@
 import sys
 sys.path.append('./venv/Lib/site-packages')
+import webbrowser
 
 # Windows任务栏图标
 import ctypes
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
 
-from PyQt6.QtCore import QObject, pyqtSignal
+from PyQt6.QtCore import QObject, pyqtSignal, pyqtSlot
 from PyQt6.QtWidgets import QMainWindow, QApplication, QMessageBox
 from PyQt6.QtGui import QTextCursor
 
@@ -27,6 +28,18 @@ class Stream(QObject):
 
 
 class Pyqt_Instance(QMainWindow, Ui_MainWindow):
+
+    # 帮助菜单中的“使用说明"
+    @pyqtSlot()
+    def on_action_help_doc_triggered(self):
+        webbrowser.open('file://' + __file__ + '/../resource/doc/README.html')
+
+    # 帮助菜单中的”关于“
+    @pyqtSlot()
+    def on_action_help_about_triggered(self):
+        reply = QMessageBox()
+        reply.setStandardButtons(QMessageBox.StandardButton.Ok)
+        reply.about(self, '关于', '作者：尼尼尼@知乎 <br><a href="https://www.zhihu.com/people/nidaye2">(个人主页)</a>')
 
     # 保存用户设置的slot
     def on_pushButton_saveConfig_pressed(self):
@@ -62,7 +75,7 @@ class Pyqt_Instance(QMainWindow, Ui_MainWindow):
 
 
         optDict = getJsonUserOption()
-        optDict['zhihuUserName'] = self.lineEdit_UserId.text()
+        optDict['zhihuUserId'] = self.lineEdit_UserId.text()
         optDict['selectedPageName'] = selectedPageName
         optDict['minDelayTime'] = self.lineEdit_minInterval.text()
         optDict['maxDelayTime'] = self.lineEdit_maxInterval.text()
@@ -83,7 +96,7 @@ class Pyqt_Instance(QMainWindow, Ui_MainWindow):
     def fillUiConfig(self):
         print('从已保存设置中取值填充到用户界面')
         optDict = getJsonUserOption()
-        self.lineEdit_UserId.setText(optDict['zhihuUserName'])
+        self.lineEdit_UserId.setText(optDict['zhihuUserId'])
         self.lineEdit_minInterval.setText(optDict['minDelayTime'])
         self.lineEdit_maxInterval.setText(optDict['maxDelayTime'])
         self.lineEdit_chromePort.setText(optDict['browserPort'])
@@ -104,8 +117,8 @@ class Pyqt_Instance(QMainWindow, Ui_MainWindow):
         reply.setStandardButtons(QMessageBox.StandardButton.Ok)
         try:
             launchBrowser()
-            print("启动浏览器成功，请在浏览器中登录知乎账户。如已为登录状态，则继续执行。")
-            reply.information(self, "成功", "启动浏览器成功，请在浏览器中登录知乎账户。<br>如已为登录状态，则继续执行。")
+            print("启动浏览器成功，请在浏览器中登录知乎账户。如已为登录状态，则点击“执行检查“按钮开始检查。")
+            reply.information(self, "成功", "启动浏览器成功，请在浏览器中登录知乎账户。<br>如已为登录状态，则点击“执行检查“按钮开始检查。")
         except Exception as e:
             print(e)
             reply.critical(self, "错误", "启动浏览器错误，请检查！")
