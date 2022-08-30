@@ -1,5 +1,5 @@
 <h2> ZhihuBlockChecker-Selenium </h2>
-知乎用户用于检查被屏蔽的回答、文章、视频、想法等的小工具。<p>
+知乎用户用于检查创作内容被屏蔽的小工具，包括回答、文章、视频、想法等。<p>
 目前仅支持Windows10系统、Chrome浏览器。<p>
 
 开发工具：Python 3.10.6, Selenium 4.4.2, PyQt 6.3.1<p>
