@@ -93,7 +93,7 @@ Chrome安装路径需要确认为 "C:\\Program Files (x86)\\Google\\Chrome\\Appl
   
 11. 检查结果示例<p>
   
-![image](https://user-images.githubusercontent.com/112439804/187347895-a65f03bf-c9a1-426d-8401-bd7c67e695d5.png)
+![image](https://user-images.githubusercontent.com/112439804/187554384-828d38e8-8c3e-4156-9cef-cdc2bdbe6c13.png)
 
 
 
