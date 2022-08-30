@@ -89,7 +89,7 @@ Chrome安装路径需要确认为 "C:\\Program Files (x86)\\Google\\Chrome\\Appl
 工具即开始检查你所选择的项目。检查700个回答大约需要40分钟。<p>
 最终结果会以html页面输出到你的桌面上（暂时不支持修改保存路径)。<p>
   
-![image](https://user-images.githubusercontent.com/112439804/187324173-e5801b8f-9b06-4a3c-85aa-3e7be5a757b2.png)<p>
+![image](https://user-images.githubusercontent.com/112439804/187551226-8637a1f5-7751-412c-bda2-133a123d64f8.png)<p>
   
 11. 检查结果示例<p>
   
