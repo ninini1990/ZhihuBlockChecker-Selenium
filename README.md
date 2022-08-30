@@ -2,14 +2,20 @@
 知乎用户用于检查全部创作内容被屏蔽情况的小工具，包括回答、文章、视频、想法等。<p>
 目前仅支持Windows10系统、Chrome浏览器。<p>
 
-开发工具：Python 3.10.6, Selenium 4.4.2, PyQt 6.3.1<p>
-测试环境：Windows 10(64位), Chrome浏览器(104版本, 64位）<p>
-暂时未对其它环境/版本进行测试。
+**使用过程概述：**<p>
+下载解压后运行exe -> 输入知乎用户ID -> 保存设置 ->启动浏览器(并手工登录) -> 执行检查。<p>
 
 **下载地址：**<p>
-Github: https://github.com/ninini1990/ZhihuBlockChecker-Selenium/releases<p>
 百度网盘: https://pan.baidu.com/s/1yjP-mNoqJl1llKkCOoATaw?pwd=7777 <p>
+Github: https://github.com/ninini1990/ZhihuBlockChecker-Selenium/releases<p>
 
+**运行环境需求：**<p>
+Windows 10 (64位), Chrome浏览器 (v104 或其他较高版本, 64位）<p>
+暂时未对其它环境/版本进行详细测试。
+
+**问题反馈：**<p>
+知乎私信，或发送邮件到 ninini19900319@gmail.com
+ 
 ---
 <h2>使用提示</h2> <p>
 
@@ -29,7 +35,8 @@ Github: https://github.com/ninini1990/ZhihuBlockChecker-Selenium/releases<p>
 使用GPL3协议，请保持代码开源及遵守GPL3其他规则。
 
 ---
-<h2>安装及使用说明</h2>
+<h2>安装及使用详细说明</h2><p>
+
 
 1. 从Github或百度网盘指定地址，下载最新版本的zip压缩包。<p>  
   
@@ -78,7 +85,7 @@ Chrome安装路径需要确认为 "C:\\Program Files (x86)\\Google\\Chrome\\Appl
 ![image](https://user-images.githubusercontent.com/112439804/187324092-97b494ab-e593-4a24-8cea-31082b427f2b.png)<p>
   
 10. 通过工具启动Chrome浏览器，并确认已登录知乎账户之后，点击“执行检查”按钮。<p>
-工具即开始检查你所选择的待检查项。检查700个回答约耗时40分钟。<p>
+工具即开始检查你所选择的项目。检查700个回答大约需要40分钟。<p>
 最终结果会以html页面输出到你的桌面上（暂时不支持修改保存路径)。<p>
   
 ![image](https://user-images.githubusercontent.com/112439804/187324173-e5801b8f-9b06-4a3c-85aa-3e7be5a757b2.png)<p>
