@@ -33,7 +33,7 @@ Github: https://github.com/ninini1990/ZhihuBlockChecker-Selenium/releases<p>
 
 1. 从Github或百度网盘指定地址，下载最新版本的zip压缩包。<p>  
   
-2. 解压到任意目录(路径中不要包含中文)。<p>
+2. 解压到任意目录。路径中不要包含中文，且需要有大于200MB的磁盘空间(运行时Chrome用户文件所需空间)。<p>
   
 3. 双击执行ZhihuBlockChecker.exe <p>
   
