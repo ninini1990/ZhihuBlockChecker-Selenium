@@ -14,10 +14,17 @@ from webdriver_manager.chrome import ChromeDriverManager
 from util.JsonUtil import getJsonSelectors, getJsonUserOption
 from util.TimeUtil import customSleep
 
+
+# 获取知乎用户ID
+def getUserId():
+    data = getJsonUserOption()
+    return data['zhihuUserId']
+
+
 # 获取用户主页
 def getHomePage():
     data = getJsonUserOption()
-    homePage = "https://www.zhihu.com/people/" + data['zhihuUserName']
+    homePage = "https://www.zhihu.com/people/" + data['zhihuUserId']
     return homePage
 
 

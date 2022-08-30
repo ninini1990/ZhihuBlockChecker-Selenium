@@ -15,6 +15,7 @@ def checkLink(browser, pageName):
         allLinkList = []
         blockedLinkList = []
         blockFlag = getBlockFlag()
+        zhihuUserId = getUserId()
         pageBase = getPageBase(pageName)
         cnPageName = convertPageName(pageName)
 
@@ -31,7 +32,7 @@ def checkLink(browser, pageName):
         pageNum = 1
 
         # 获取该页面类型要检查的全部链接
-        print("开始获取页面链接...")
+        print("开始获取页面中的链接...")
         while(pageNum <= pageCount):
             # 拼接页面URL并打开对应页面
             pageUrl = getPageUrl(pageBase, str(pageNum))
@@ -81,7 +82,7 @@ def checkLink(browser, pageName):
 
             print('{0} - 全部链接数量：{1}, 被屏蔽链接数量：{2}, 请求异常数量：{3} '.format(cnPageName, allLinkCount, blockedLinkCount, blockRate))
             print('正在生成报告...')
-            report = outputReportPage(pageName, allLinkCount, blockedLinkCount, blockRate, blockedLinkList)
+            report = outputReportPage(zhihuUserId, pageName, allLinkCount, blockedLinkCount, blockRate, blockedLinkList)
         except Exception as e:
             print(e, "当前检查出现网络错误或其它错误，跳过。继续检查下一项。")
     finally:
