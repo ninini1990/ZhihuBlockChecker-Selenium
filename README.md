@@ -83,7 +83,7 @@ Chrome安装路径需要确认为 "C:\\Program Files (x86)\\Google\\Chrome\\Appl
 
 ![image](https://user-images.githubusercontent.com/112439804/187320429-76ed4425-fd15-471e-801a-08fee7bb8dca.png)<p>
   
-![image](https://user-images.githubusercontent.com/112439804/187324092-97b494ab-e593-4a24-8cea-31082b427f2b.png)<p>
+![image](https://user-images.githubusercontent.com/112439804/187551588-dba7dd7f-2a1a-4802-8c44-40797629eef0.png)<p>
   
 10. 通过工具启动Chrome浏览器，并确认已登录知乎账户之后，点击“执行检查”按钮。<p>
 工具即开始检查你所选择的项目。检查700个回答大约需要40分钟。<p>
