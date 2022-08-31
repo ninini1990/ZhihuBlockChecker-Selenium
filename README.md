@@ -7,7 +7,7 @@
 说明文档位置：工具界面 -> 帮助菜单 -> 使用说明。
 
 **下载地址：**<p>
-百度网盘: https://pan.baidu.com/s/1yjP-mNoqJl1llKkCOoATaw?pwd=7777 <p>
+百度网盘: https://pan.baidu.com/s/1cYQtcfRqW_IsrOBNch4Zew?pwd=6666  --子目录：知乎屏蔽检查工具(Selenium版) <p>
 Github: https://github.com/ninini1990/ZhihuBlockChecker-Selenium/releases<p>
 
 **运行环境需求：**<p>
