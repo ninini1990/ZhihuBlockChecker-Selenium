@@ -12,7 +12,7 @@ from PyQt6.QtWidgets import QMainWindow, QApplication, QMessageBox
 from util.CommonUitl import convertPageName
 from util.JsonUtil import getJsonUserOption, writeJsonUserOption
 from ZhihuBlockChecker import Ui_MainWindow
-from project.BrowserHandler import launchBrowser
+from project.BrowserHandler import launchBrowser, getChromePath
 from project.CheckThread import CheckThread
 
 stdOutTemp = sys.stdout
@@ -38,7 +38,7 @@ class Pyqt_Instance(QMainWindow, Ui_MainWindow):
     def on_action_help_about_triggered(self):
         reply = QMessageBox()
         reply.setStandardButtons(QMessageBox.StandardButton.Ok)
-        reply.about(self, '关于', '作者: 尼尼尼@知乎 <br><a href="https://www.zhihu.com/people/nidaye2">(个人主页)</a>')
+        reply.about(self, '关于', '版本: v1.2 <br>作者: 尼尼尼@知乎 <br><a href="https://www.zhihu.com/people/nidaye2">(个人主页)</a>')
 
     # 保存用户设置的slot
     def on_pushButton_saveConfig_pressed(self):
@@ -94,6 +94,9 @@ class Pyqt_Instance(QMainWindow, Ui_MainWindow):
     # 从已保存设置中取值填充到用户界面
     def fillUiConfig(self):
         print('从已保存设置中取值填充到用户界面')
+        chromePath = getChromePath()
+        self.lineEdit_chromePath.setText(chromePath)
+
         optDict = getJsonUserOption()
         self.lineEdit_UserId.setText(optDict['zhihuUserId'])
         self.lineEdit_minInterval.setText(optDict['minDelayTime'])
@@ -160,6 +163,7 @@ class Pyqt_Instance(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.setFixedSize(self.width(), self.height());
         sys.stdout = Stream(newText=self.onUpdateEdit)
+        self.label_authorLink.setOpenExternalLinks(True)
         self.fillUiConfig()
 
 

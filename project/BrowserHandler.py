@@ -3,6 +3,7 @@
 
 import os
 import subprocess
+import winreg
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -13,6 +14,15 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 from util.JsonUtil import getJsonSelectors, getJsonUserOption
 from util.TimeUtil import customSleep
+
+
+# 获取注册表中Chrome安装路径
+def getChromePath():
+    chromeRegInfo = 'SOFTWARE\Clients\StartMenuInternet\Google Chrome\DefaultIcon'
+    chromeKey = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, chromeRegInfo)
+    value, _type = winreg.QueryValueEx(chromeKey, "")
+    chromePath = value.split(',')[0].replace('\\chrome.exe', '')
+    return chromePath
 
 
 # 获取知乎用户ID
@@ -66,12 +76,13 @@ def isLogin(browser):
 # 启动Debug模式浏览器
 def launchBrowser():
     userOption = getJsonUserOption()
-    chromePath =userOption['chromeInstallPath']
+    chromePath = getChromePath()
     port = userOption['browserPort']
     profilePath = __file__ + "\\..\\..\\log\\profile"
 
     os.system('chcp 65001')
     folderCmd = chromePath
+    print(folderCmd)
     launchCmd = 'chrome.exe https://www.zhihu.com --remote-debugging-port=' + port + ' --user-data-dir=' + '"' + profilePath + '"'
     subprocess.Popen(launchCmd, shell=True, cwd=folderCmd)
 

@@ -1,9 +1,8 @@
 {
     "zhihuUserId": "heheda111",
-    "selectedPageName": "answers",
+    "selectedPageName": "pins",
     "minDelayTime": "1",
     "maxDelayTime": "3",
     "browserIp": "127.0.0.1",
-    "browserPort": "8888",
-    "chromeInstallPath": "C:\\Program Files (x86)\\Google\\Chrome\\Application"
+    "browserPort": "8888"
 }
