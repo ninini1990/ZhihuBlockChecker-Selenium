@@ -11,7 +11,7 @@ def outputReportPage(zhihuUserId, pageName, allLinkCount, blockedLinkCount, bloc
     # 组装html
     htmlHeader = '<!DOCTYPE html><html lang="cn"><head><meta charset="utf-8"><title>' + cnPageName +' - 检查结果</title><link rel="stylesheet" href=' + stylePath +'></head><body>'
 
-    summary = '<div><b>' + cnPageName + ' - 检查结果</b><p><b>知乎用户ID: ' + zhihuUserId + '，总链接数量：</b>' + str(allLinkCount) + '<b>，被屏蔽数量：</b>' + str(blockedLinkCount) + '，<b>被屏蔽比例：</b>' + str(blockRate) +  '</div><div><p><table class="hovertable">'
+    summary = '<div><b>' + cnPageName + ' - 检查结果</b><p><b>知乎用户ID: ' + zhihuUserId + '，总链接数量：</b>' + str(allLinkCount) + '<b>，被屏蔽数量：</b>' + str(blockedLinkCount) + '，<b>被屏蔽比例：</b>' + str(blockRate) + '</div><div>如有创作内容被屏蔽，请与知乎小管家交流，共同学习，共同进步。</div><div><p><table class="hovertable">'
 
     table = '<th>所属页码</th><th>被屏蔽链接</th>'
 

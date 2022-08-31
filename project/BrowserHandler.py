@@ -82,7 +82,6 @@ def launchBrowser():
 
     os.system('chcp 65001')
     folderCmd = chromePath
-    print(folderCmd)
     launchCmd = 'chrome.exe https://www.zhihu.com --remote-debugging-port=' + port + ' --user-data-dir=' + '"' + profilePath + '"'
     subprocess.Popen(launchCmd, shell=True, cwd=folderCmd)
 
