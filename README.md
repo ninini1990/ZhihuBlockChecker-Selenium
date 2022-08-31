@@ -93,8 +93,7 @@ Chrome安装路径由工具从Windows注册表中自动获取，暂时不允许�
   
 11. 检查结果示例<p>
   
-![image](https://user-images.githubusercontent.com/112439804/187554384-828d38e8-8c3e-4156-9cef-cdc2bdbe6c13.png)
-
+![image](https://user-images.githubusercontent.com/112439804/187595876-25928420-03ed-4e9c-82c3-422f5b82c9d4.png)
 
 
 
