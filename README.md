@@ -67,7 +67,7 @@ Windows 10 (64位), Chrome浏览器 (v104 或其他较高版本, 64位）<p>
   
 7. 设置Chrome浏览器信息。目前只允许设置其监听端口，默认为8888。<p>
 如果已被其它程序占用，可自定义为其它端口。不能大于65535。<p>
-Chrome安装路径从Windows注册表中自动获取，不需要人工输入<p>
+Chrome安装路径由工具从Windows注册表中自动获取，暂时不允许自定义设置。<p>
   
 ![image](https://user-images.githubusercontent.com/112439804/187319865-13c4528c-2b52-4fc5-895a-9642a3acf036.png)<p>
   
