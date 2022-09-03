@@ -1,6 +1,7 @@
 <h2> ZhihuBlockChecker-Selenium </h2>
 知乎用户用于检查全部创作内容被屏蔽情况的小工具，包括回答、文章、视频、想法等。<p>
 目前仅支持Windows10系统、Chrome浏览器。<p>
+作者：<a href="https://www.zhihu.com/people/nidaye2" target="_blank">尼尼尼@知乎</a>
 
 **使用过程概述：**<p>
 下载解压后运行exe -> 输入知乎用户ID -> 保存设置 ->启动浏览器(并手工登录) -> 执行检查。<p>
